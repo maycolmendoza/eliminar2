@@ -26,7 +26,7 @@
     <meta property="og:image" content="https://res.cloudinary.com/dicmh7cfa/image/upload/v1657587863/logos%20monfu%202022/logos_menu/Group_2_axi5p1.png" />
 
     <link rel="manifest" href="manifest.json" />
-    <script src="views/js/app.js"></script>
+    <script src="views/app.js"></script>
 
 </head>
 <!-- Messenger Plugin de chat Code -->
