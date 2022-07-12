@@ -2,7 +2,7 @@
     "short_name": "MONFU 2022",
     "name": "MONFU 2022",
     "description": "Del 23 al 25 de noviembre de 2022 se celebrará en la ciudad de Arequipa el Simposio Científico “Las Montañas, Nuestro Futuro 2022”",
-    "start_url": "index.html",
+    "start_url": "/",
     "display": "standalone",
     "background_color": "#0067C0",
     "theme_color": "#0067C0",
