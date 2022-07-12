@@ -1,0 +1,1685 @@
+    @font-face {
+        font-family: flama;
+        src: url("views/fonts/Flama-Basic.otf");
+    }
+    
+    @font-face {
+        font-family: flama-regular;
+        src: url("views/fonts/Flama Regular.otf");
+    }
+    
+    @font-face {
+        font-family: flama-italic;
+        src: url("views/fonts/Flama Italic.otf");
+    }
+    
+    @font-face {
+        font-family: flama-bold-italic;
+        src: url("views/fonts/Flama Bold Italic.otf");
+    }
+    
+    @font-face {
+        font-family: flama-bold;
+        src: url("views/fonts/Flama-Bold.otf");
+    }
+    
+    @font-face {
+        font-family: flama-ligth;
+        src: url("views/fonts/Flama-Light.otf");
+    }
+    
+    @font-face {
+        font-family: flama-medium;
+        src: url("views/fonts/Flama-Medium.otf");
+    }
+    
+    @font-face {
+        font-family: 'flama-bold';
+        /*font-weight: 500;
+        font-style: bold;*/
+        font-display: fallback;
+        src: local('flama-bold'), local('flama-bold'), url('views/fonts/Flama Bold Italic.woff2') format('woff2'), url('views/fonts/Flama Bold Italic.woff') format('woff');
+    }
+    
+    @font-face {
+        font-family: 'flama';
+        font-display: fallback;
+        src: local('flama'), local('flama'), url('views/fonts/Flama-Basic.woff2') format('woff2'), url('views/fonts/Flama-Basic.woff') format('woff');
+    }
+    
+    @font-face {
+        font-family: 'flama-ligth';
+        font-display: fallback;
+        src: local('flama-ligth'), local('flama-ligth'), url('views/fonts/Flama-Light.woff2') format('woff2'), url('views/fonts/Flama-Light.woff') format('woff');
+    }
+    
+    @font-face {
+        font-family: 'flama-medium';
+        font-display: fallback;
+        src: local('flama-medium'), local('flama-medium'), url('views/fonts/Flama-Medium.woff2') format('woff2'), url('views/fonts/Flama-Medium.woff') format('woff');
+    }
+    
+    body {
+        font-family: flama;
+    }
+    /*fin marquee*/
+    /*Barra del Scrollbar General*/
+    
+     ::-webkit-scrollbar {
+        width: 6px;
+        border-radius: 10px;
+    }
+    
+     ::-webkit-scrollbar-thumb {
+        background-color: #cccccc;
+        border-radius: 10px;
+    }
+    
+    .scrollspy-example::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 10px;
+    }
+    
+    .scrollspy-example::-webkit-scrollbar-thumb {
+        background-color: #E0E0E0;
+        border-radius: 10px;
+    }
+    
+    .event::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 10px;
+        background-color: #EDEFF2;
+    }
+    
+    .event::-webkit-scrollbar-thumb {
+        background-color: #EDEFF2;
+        border-radius: 10px;
+    }
+    /*FONDO*/
+    
+    .fondo-aleatorio {}
+    /*FINBDE BARRA SCROLL GENERAL*/
+    
+    #spin:after {
+        content: "";
+        animation: spin 60s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% {
+            content: "Del 23 al 25 de noviembre de 2022 se celebrará en la ciudad de Arequipa el Simposio Científico “Las Montañas, Nuestro Futuro 2022”, organizado por el Instituto Nacional de Investigación en Glaciares y Ecosistemas de Montaña (INAIGEM) y Forest Trends Association.";
+        }
+        20% {
+            content: "El objetivo de este Simposio Internacional es “Difundir el conocimiento técnico científico sobre los ecosistemas de montaña y los glaciares tropicales en un contexto de cambio climático”";
+        }
+        40% {
+            content: "Como institución organizadora del Simposio Internacional “Las Montañas: Nuestro Futuro”, el INAIGEM busca difundir el conocimiento técnico científico sobre los ecosistemas de montaña y los glaciares tropicales, en un contexto de cambio climático";
+        }
+        60% {
+            content: "Transferir el conocimiento científico sobre los efectos e impactos del cambio climático en los ecosistemas de montaña y los glaciares tropicales, a la institucionalidad nacional e internacional para la toma de decisiones. ";
+        }
+        80% {
+            content: "Esperamos que el Simposio Internacional “Las Montañas: Nuestro Futuro 2022” sea de gran provecho para todos los especialistas y público general asistente.";
+        }
+        100% {
+            content: "Del 23 al 25 de noviembre de 2022 se celebrará en la ciudad de Arequipa el Simposio Científico “Las Montañas, Nuestro Futuro 2022”, organizado por el Instituto Nacional de Investigación en Glaciares y Ecosistemas de Montaña (INAIGEM) y Forest Trends Association.";
+        }
+    }
+    /*btn sociales*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .social {
+        position: fixed;
+        left: 0;
+        top: 200px;
+        z-index: 2000;
+        transition: all 300ms ease;
+        transform: scale(0);
+        transition: background-color 0.3s;
+        -moz-transition: background-color 0.3s;
+        -webkit-transition: background-color 0.3s;
+        -o-transition: background-color 0.3s;
+    }
+    
+    .social ul {
+        list-style: none;
+    }
+    
+    .social ul li a {
+        display: inline-block;
+        color: #fff;
+        background: #000;
+        padding: 10px 15px;
+        text-decoration: none;
+        -webkit-transition: all 500ms ease;
+        -o-transition: all 500ms ease;
+        transition: all 500ms ease;
+    }
+    
+    .social ul li .facebook {
+        background: #3b5998;
+    }
+    
+    .social ul li .twitter {
+        background: #00abf0;
+    }
+    
+    .social ul li .googleplus {
+        background: #d95232;
+    }
+    
+    .social ul li .pinterest {
+        background: #ae181f;
+    }
+    
+    .social ul li .mail {
+        background: #063e7a;
+    }
+    
+    .social ul li a:hover {
+        background: #000;
+        padding: 10px 30px;
+    }
+    /*fin de btn sociales*/
+    /*TEXTO GRADIENTE*/
+    
+    .txt-bg-gradient {
+        width: 100%;
+        font-size: clamp(1rem, 4rem, 3rem);
+        font-family: flama-medium;
+        font-size: 45px;
+        background-color: #0067C0;
+        color: transparent;
+        text-align: left;
+        background-size: cover;
+        background-position-y: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .txt-bg-gradient2 {
+        width: 100%;
+        font-size: 40px;
+        font-family: flama-medium;
+        text-align: right;
+        background-color: #0067C0;
+        background-size: cover;
+        background-position-y: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    /*FIN DEL TEXTO GRADIENTE*/
+    /*POINT EVENT*/
+    
+    img:not([data-attr="marcas"]) {
+        pointer-events: none;
+    }
+    
+    img {
+        pointer-events: none;
+    }
+    /*IMG EVENTO*/
+    
+    img.img-evento {
+        position: absolute;
+        width: 40%;
+        height: auto;
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        top: 0%;
+        left: 10%;
+        margin-top: -200px;
+        background-size: 100% 100%;
+    }
+    
+    img.img-evento:empty {
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    
+    @media screen and (orientation: portrait) {
+        img.img-evento {
+            max-width: 90%;
+        }
+    }
+    
+    @media screen and (orientation: landscape) {
+        img.img-evento {
+            max-height: 90%;
+        }
+    }
+    /*FIN IMG EVENTO*/
+    /*LOGO MONTAÑAS FUTURO*/
+    
+    img .logo-montañas {
+        text-indent: -9999px;
+        display: block;
+        max-width: 60%;
+        max-height: 60%;
+        top: 0%;
+        background-size: 100% 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    /*FIN LOGO MONTAÑAS FUTURO*/
+    /*FOOTER*/
+    
+    .footer-distributed {
+        background: #0067c0;
+        height: 100%;
+        width: 100%;
+        font: bold 16px sans-serif;
+        text-align: left;
+    }
+    /* Footer left */
+    
+    .footer-distributed .footer-left {
+        float: left;
+    }
+    /* The company logo */
+    
+    .footer-distributed h3 {
+        color: #ffffff;
+        font: normal 36px flama, cursive;
+        margin: 0 0 10px;
+    }
+    
+    .footer-distributed h3 span {
+        color: #5383d3;
+    }
+    
+    .footer-links {
+        font-family: flama;
+        text-align: right;
+    }
+    /* Footer links */
+    
+    .footer-distributed .footer-links {
+        color: #ffffff;
+        padding: 0;
+    }
+    
+    .footer-distributed .footer-links a {
+        display: inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color: inherit;
+    }
+    /* Footer social icons */
+    
+    .footer-distributed .footer-icons {
+        margin-top: 40px;
+    }
+    
+    .footer-distributed .footer-icons a {
+        display: inline-block;
+        cursor: pointer;
+        background-color: none;
+        text-align: center;
+    }
+    /* Footer Right */
+    
+    .footer-distributed .footer-right {
+        float: right;
+    }
+    
+    .footer-distributed .footer-right p {
+        display: inline-block;
+        vertical-align: top;
+        margin: 15px 42px 0 0;
+        color: #ffffff;
+    }
+    /* The contact form */
+    
+    .footer-distributed form {
+        display: inline-block;
+    }
+    
+    .footer-distributed form input,
+    .footer-distributed form textarea {
+        display: block;
+        border-radius: 3px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: none;
+        resize: none;
+        font: inherit;
+        font-size: 14px;
+        font-weight: normal;
+        color: #0067c0;
+        width: 200px;
+        padding: 18px;
+    }
+    
+    input::placeholder {
+        color: #0067c0;
+    }
+    
+    label {
+        color: #fff;
+        font-family: flama;
+    }
+    
+    textarea::placeholder {
+        color: #0067c0;
+    }
+    
+    .footer-distributed ::-webkit-input-placeholder {
+        color: #0067c0;
+    }
+    
+    .footer-distributed ::-moz-placeholder {
+        color: #0067c0;
+        opacity: 1;
+    }
+    
+    .footer-distributed :-ms-input-placeholder {
+        color: #0067c0;
+    }
+    
+    .footer-distributed form input {
+        height: 55px;
+        margin-bottom: 15px;
+        font-family: flama;
+    }
+    
+    .footer-distributed form textarea {
+        height: 0px;
+        margin-bottom: 20px;
+        font-family: flama;
+    }
+    
+    .footer-distributed form button {
+        border: 2px solid #fff;
+        background-color: #0067c0;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        border-radius: 30px;
+        color: #ffffff;
+        width: 100%;
+        font-weight: bold;
+        float: right;
+    }
+    
+    .boton-inaigem {
+        border: 2px solid #fff;
+        background-color: transparent;
+        color: white;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 0px;
+        color: #ffffff;
+        font-weight: bold;
+        float: right;
+    }
+    
+    .boton-inaigem:hover {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    .boton-inaigem2 {
+        border: 2px solid #fff;
+        background-color: transparent;
+        color: #fff;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 8px;
+        font-weight: bold;
+        float: right;
+    }
+    
+    .boton-inaigem2:hover {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    .team:hover {
+        background-color: #d9d9d998;
+        opacity: 10;
+        color: #000;
+        border: 3px solid #fff;
+    }
+    /* If you don't want the footer to be responsive, remove these media queries */
+    
+    @media (max-width: 1000px) {
+        .footer-distributed {
+            font: bold 14px sans-serif;
+        }
+        .footer-distributed .footer-company-name {
+            font-size: 12px;
+        }
+        .footer-distributed form input,
+        .footer-distributed form textarea {
+            width: 250px;
+        }
+        .footer-distributed form button {
+            padding: 10px 35px;
+        }
+    }
+    
+    @media (max-width: 800px) {
+        .footer-distributed {
+            padding: 30px;
+        }
+        .footer-distributed .footer-left,
+        .footer-distributed .footer-right {
+            float: none;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .footer-distributed .footer-left {
+            margin-bottom: 40px;
+        }
+        .footer-distributed form {
+            margin-top: 30px;
+        }
+        .footer-distributed form {
+            display: block;
+        }
+        .footer-distributed form button {
+            float: none;
+        }
+    }
+    
+     ::placeholder {
+        font-family: flama;
+    }
+    
+    input:focus::placeholder {
+        color: transparent;
+    }
+    
+    textarea:focus::placeholder {
+        color: transparent;
+    }
+    /*FIN DEL FOOTER*/
+    /*PROGRAMA*/
+    
+    .list-group-item {
+        background-color: #D9D9D9;
+        color: #286AC9 !important;
+        border: none;
+        margin: 3px 0px;
+        text-align: center;
+        box-shadow: 0 4px px rgb(0 0 0/ 25%);
+    }
+    
+    a>.list-group-item:hover {
+        color: #286AC9 !important;
+        background-color: #D9D9D9;
+    }
+    
+    #list-item-1,
+    #list-item-2,
+    #list-item-3 {
+        color: #000;
+    }
+    
+    .list-group-item:hover {
+        color: #286AC9 !important;
+        background-color: #D9D9D9;
+    }
+    
+    .list-group-item.active:hover {
+        color: #286AC9 !important;
+        background-color: #D9D9D9;
+    }
+    
+    .list-group-item.active {
+        background-color: #fff;
+        color: #286AC9 !important;
+    }
+    
+    .scrollspy-example {
+        height: 225px;
+        overflow-y: scroll;
+    }
+    
+    .scrollspy-example>a,
+    p,
+    h1,
+    h2,
+    ul,
+    li,
+    h3.h4 {
+        color: #000;
+    }
+    
+    .scrollspy-example::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    .scrollspy-example::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(190, 187, 214, 0.87);
+        -webkit-border-radius: 1px;
+        background: #D9D9D9;
+        border-radius: 4px;
+    }
+    
+    .list-example {
+        height: 100%;
+    }
+    
+    h4 {
+        text-align: center;
+        color: #000;
+        font-size: 18px;
+    }
+    
+    .list-group a img {
+        width: 150px;
+    }
+    
+    .tag {
+        width: 50%;
+        height: 400px;
+        background: transparent;
+        position: absolute;
+        top: 70px;
+        left: 32px;
+        border-radius: 50%;
+    }
+    
+    .mycontainer {
+        height: 100%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    .myrow {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .my-logo-programa {
+        margin-bottom: 20px;
+    }
+    
+    .cronograma-img {
+        border-radius: 50%;
+    }
+    /*CARD de ESTADIA
+
+h1::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+h1::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0 0 0 0;
+    background: #E0E0E0;
+    color: #000;
+    z-index: -1;
+    transition: transform .3s ease;
+}
+
+h1 {
+    position: relative;
+    font-size: 5rem;
+}
+FIN DEL EFECTO H1*/
+    /*TOLTIP*/
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+    }
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #0067C0;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 7px 9px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-weight: 500;
+    }
+    
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #222 transparent transparent transparent;
+    }
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+    /*FIN DEL TOOLTIP*/
+    /*mediaquerys*/
+    
+    @media (min-width: 1281px) {
+        .img-foot {
+            width: 290px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .viewports {
+            visibility: hidden;
+        }
+    }
+    
+    @media (min-width: 1025px) and (max-width: 1280px) {
+        .img-foot {
+            width: 290px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .viewports {
+            visibility: hidden;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /* CSS */
+        .img-foot {
+            width: 290px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 524px) {
+        /* CSS */
+        .img-foot {
+            width: 290px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .hero-content {
+            margin-top: 1200px;
+        }
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+    }
+    
+    @media (min-width: 526px) and (max-width: 767px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        img.img-evento {
+            background-size: 100% 100%;
+            width: 500px;
+            margin-top: -150px;
+        }
+    }
+    
+    @media (min-width: 240px) and (max-width: 320px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .hero-content {
+            margin-top: 100px;
+            padding: 5%;
+        }
+        .contadaor {
+            margin-top: 100px;
+            padding: 2%;
+        }
+    }
+    
+    @media (min-width: 897px) and (max-width: 996px) {
+        /* CSS */
+        .hero-content {
+            margin-top: -200px;
+            padding: 5%;
+        }
+        .contadaor {
+            margin-top: 60px;
+            padding: 15%;
+        }
+    }
+    
+    @media (min-width: 523px) and (max-width: 996px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .hero-content {
+            margin-top: 300px;
+            padding: 12%;
+        }
+        .contadaor {
+            margin-top: 100px;
+            padding: 5%;
+        }
+        /*animacion del logo arequipa*/
+        /*FIN DE ANIMACIONES DEL LOGO AREQUIPA*/
+        /*LOGO MARCA */
+        .navbar-brand {
+            visibility: hidden;
+        }
+        /*FIN LOGO MARCA*/
+        /*NAVBAR*/
+        .nav-down {
+            background-color: #000;
+        }
+        /*FIN NAVBAR*/
+        .ponentes {
+            margin-top: -200px;
+        }
+        .texto-ponentes {
+            margin-top: -60px;
+        }
+        .montaña-falsa {
+            margin-top: 1111111111px;
+        }
+        .skl-estadia {
+            margin-top: -90px;
+        }
+        .text-estadia {
+            margin-top: -180px;
+        }
+        .text-organizacion {
+            font-size: 10px;
+        }
+    }
+    
+    @media (min-width: 481px) and (max-width: 767px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        img.img-evento {
+            background-size: 100% 100%;
+            width: 500px;
+            margin-top: -150px;
+        }
+    }
+    
+    @media (min-width: 414px) and (max-width: 896px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .hero-content {
+            margin-top: 100px;
+        }
+    }
+    
+    @media (min-width: 320px) and (max-width: 524px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .navbar-brand {
+            background-size: cover;
+            object-fit: contain;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-size: 100% 100%;
+        }
+        .hero-content {
+            margin-top: 300px;
+            padding: 2%;
+        }
+        .dias {}
+        /*animacion del logo arequipa*/
+        /*FIN DE ANIMACIONES DEL LOGO AREQUIPA*/
+        /*LOGO MARCA */
+        .navbar-brand {
+            visibility: hidden;
+        }
+        /*FIN LOGO MARCA*/
+        /*NAVBAR*/
+        .nav-down {
+            background-color: #000;
+        }
+        /*FIN NAVBAR*/
+        .ponentes {
+            margin-top: -200px;
+        }
+        .texto-ponentes {
+            margin-top: -60px;
+        }
+        .montaña-falsa {
+            margin-top: 1111111111px;
+        }
+        .skl-estadia {
+            margin-top: -90px;
+        }
+        .text-estadia {
+            margin-top: -180px;
+        }
+        .text-organizacion {
+            font-size: 10px;
+        }
+    }
+    
+    @media (min-width: 320px) and (max-width: 480px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .navbar-brand {
+            background-size: cover;
+            object-fit: contain;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-size: 100% 100%;
+            margin-top: -5px;
+        }
+        .logo-light {
+            visibility: hidden;
+        }
+        /*MENU MOBILE*/
+         :root {
+            --screen-height: 100%;
+            --header-bg-color: transparent;
+            --splash-bg-color: #0067c0;
+        }
+        .nav__toggles {
+            display: inline-block;
+            position: absolute;
+            z-index: 10;
+            padding: 0;
+            border: 0;
+            background: rgba(100, 99, 99, 0.45);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            outline: 0;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.15s linear;
+        }
+        .nav__toggles:hover,
+        .nav__toggles:focus {
+            background-color: #0067c0;
+        }
+        .nav__menus {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: var(--screen-height);
+            position: relative;
+            z-index: 5;
+            margin-top: 100px;
+            visibility: hidden;
+        }
+        .nav__menu2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 5;
+            margin-left: 20px;
+            margin-top: 20px;
+            visibility: hidden;
+        }
+        .nav__menu2>img {
+            width: 50%;
+        }
+        .nav__items {
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0, 0.995, 0.99, 1) 0.3s;
+        }
+        .nav__items:nth-child(1) {
+            transform: translateY(-40px);
+        }
+        .nav__items:nth-child(2) {
+            transform: translateY(-80px);
+        }
+        .nav__items:nth-child(3) {
+            transform: translateY(-120px);
+        }
+        .nav__items:nth-child(4) {
+            transform: translateY(-160px);
+        }
+        .nav__items:nth-child(5) {
+            transform: translateY(-200px);
+        }
+        .nav__links {
+            color: white;
+            display: block;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 1.25rem;
+            text-decoration: none;
+            padding: 1rem;
+        }
+        .nav__links:hover,
+        .nav__links:focus {
+            outline: 0;
+            font-size: clamp(20px, 30px, 30px);
+            text-transform: uppercase;
+            font-weight: 100;
+        }
+        .menuicons {
+            display: block;
+            cursor: pointer;
+            color: white;
+            transform: rotate(0deg);
+            transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .menuicon__bars,
+        .menuicon__circles {
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 3;
+            stroke-linecap: round;
+        }
+        .menuicon__bars {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+            transition: transform 0.25s ease-in-out;
+        }
+        .menuicon__circles {
+            transition: stroke-dashoffset 0.3s linear 0.1s;
+            stroke-dashoffset: 144.513262038;
+            stroke-dasharray: 144.513262038;
+        }
+        .splashs {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            width: 1px;
+            height: 1px;
+        }
+        .splashs::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border-radius: 50%;
+            background-color: var(--splash-bg-color);
+            width: 284vmax;
+            height: 284vmax;
+            top: -142vmax;
+            left: -142vmax;
+            transform: scale(0);
+            transform-origin: 50% 50%;
+            transition: transform 0.5s cubic-bezier(0.755, 0.05, 0.855, 0.06);
+            will-change: transform;
+        }
+        .navs:target>.splashs::after,
+        .nav--opens>.splashs::after {
+            transform: scale(1);
+        }
+        .navs:target .menuicons,
+        .nav--opens .menuicons {
+            color: white;
+            transform: rotate(180deg);
+        }
+        .navs:target .menuicon__circles,
+        .navs--open .menuicon__circles {
+            stroke-dashoffset: 0;
+        }
+        .navs:target .menuicon__bars:nth-child(1),
+        .navs:target .menuicon__bars:nth-child(4),
+        .nav--opens .menuicon__bars:nth-child(1),
+        .nav--opens .menuicon__bars:nth-child(4) {
+            opacity: 0;
+        }
+        .navs:target .menuicon__bars:nth-child(2),
+        .nav--opens .menuicon__bars:nth-child(2) {
+            transform: rotate(45deg);
+        }
+        .navs:target .menuicon__bars:nth-child(3),
+        .nav--opens .menuicon__bars:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+        .navs:target .nav__menus,
+        .nav--opens .nav__menus {
+            visibility: visible;
+        }
+        .navs:target .nav__menu2,
+        .nav--opens .nav__menu2 {
+            visibility: visible;
+        }
+        .navs:target .nav__items,
+        .nav--opens .nav__items {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .viewports {
+            width: var(--screen-width);
+            height: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: transparent !important;
+            width: 100%;
+            visibility: visible;
+        }
+        .headers {
+            height: 100%;
+            background-color: var(--header-bg-color);
+            margin: 0 auto;
+            position: fixed;
+            overflow: hidden;
+            background-color: transparent !important;
+            width: 100%;
+        }
+        /*FIN DEL MNU MOBILE*/
+    }
+    
+    @media (min-width: 280px) and (max-width: 524px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .navbar-brand {
+            background-size: cover;
+            object-fit: contain;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-size: 100% 100%;
+        }
+        img.img-evento {
+            background-size: 100% 100%;
+            width: 500px;
+            margin-top: -150px;
+        }
+    }
+    
+    @media (min-width: 240px) and (max-width: 524px) {
+        /* CSS */
+        .img-foot {
+            width: 280px;
+            height: 100px;
+        }
+        footer {
+            width: 100%;
+        }
+        .navbar-brand {
+            background-size: cover;
+            object-fit: contain;
+            margin-left: auto;
+            margin-right: auto;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-size: 100% 100%;
+        }
+        img.img-evento {
+            background-size: 100% 100%;
+            width: 500px;
+            margin-top: -150px;
+        }
+    }
+    /*FIN MEDIA QUERYS*/
+    /*CARD ESTADIA*/
+    
+    .blog-cardx {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem auto;
+        box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.6%;
+        background: #fff;
+        line-height: 1.4;
+        font-family: sans-serif;
+        border-radius: 5px;
+        overflow: hidden;
+        z-index: 0;
+    }
+    
+    .blog-cardx a {
+        color: inherit;
+    }
+    
+    .blog-cardx a:hover {
+        color: #5ad67d;
+    }
+    
+    .blog-cardx:hover .photox {
+        transform: scale(1.3) rotate(3deg);
+    }
+    
+    .blog-cardx .metax {
+        position: relative;
+        z-index: 0;
+        height: 200px;
+    }
+    
+    .blog-cardx .photox {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.2s;
+    }
+    
+    .blog-cardx .detailsx,
+    .blog-cardx .detailsx ul {
+        margin: auto;
+        padding: 0;
+        list-style: none;
+    }
+    
+    .blog-cardx .detailsx {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        margin: auto;
+        transition: left 0.2s;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+        font-size: 0.9rem;
+    }
+    
+    .blog-cardx .detailsx a {
+        -webkit-text-decoration: dotted underline;
+        text-decoration: dotted underline;
+    }
+    
+    .blog-cardx .detailsx ul li {
+        display: inline-block;
+    }
+    
+    .blog-cardx .detailsx .authorx:before {
+        font-family: FontAwesome;
+        margin-right: 10px;
+        content: "";
+    }
+    
+    .blog-cardx .detailsx .datex:before {
+        font-family: FontAwesome;
+        margin-right: 10px;
+        content: "";
+    }
+    
+    .blog-cardx .detailsx .tagsx ul:before {
+        font-family: FontAwesome;
+        content: "";
+        margin-right: 10px;
+    }
+    
+    .blog-cardx .detailsx .tagsx li {
+        margin-right: 2px;
+    }
+    
+    .blog-cardx .detailsx .tagsx li:first-child {
+        margin-left: -4px;
+    }
+    
+    .blog-cardx .descriptionx {
+        padding: 1rem;
+        background: #fff;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .blog-cardx .descriptionx h1,
+    .blog-cardx .descriptionx h2 {
+        font-family: Poppins, sans-serif;
+    }
+    
+    .blog-cardx .descriptionx h1 {
+        line-height: 1;
+        margin: 0;
+        font-size: 1.7rem;
+    }
+    
+    .blog-cardx .descriptionx h2 {
+        font-size: 1rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #a2a2a2;
+        margin-top: 5px;
+    }
+    
+    .blog-cardx .descriptionx .read-morex {
+        text-align: right;
+    }
+    
+    .blog-cardx .descriptionx .read-morex a {
+        color: #5ad67d;
+        display: inline-block;
+        position: relative;
+    }
+    
+    .blog-cardx .descriptionx .read-morex a:after {
+        content: "";
+        font-family: FontAwesome;
+        margin-left: -10px;
+        opacity: 0;
+        vertical-align: middle;
+        transition: margin 0.3s, opacity 0.3s;
+    }
+    
+    .blog-cardx .descriptionx .read-morex a:hover:after {
+        margin-left: 5px;
+        opacity: 1;
+    }
+    
+    .blog-cardx p {
+        position: relative;
+        margin: 1rem 0 0;
+    }
+    
+    .blog-cardx p:first-of-type {
+        margin-top: 1.25rem;
+    }
+    
+    .blog-cardx p:first-of-type:before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        background: #5ad67d;
+        width: 35px;
+        top: -0.75rem;
+        border-radius: 3px;
+    }
+    
+    .blog-cardx:hover .detailsx {
+        left: 0%;
+    }
+    
+    @media (min-width: 640px) {
+        .blog-cardx {
+            flex-direction: row;
+            max-width: 700px;
+        }
+        .blog-cardx .metax {
+            flex-basis: 40%;
+            height: auto;
+        }
+        .blog-cardx .descriptionx {
+            flex-basis: 60%;
+        }
+        .blog-cardx .descriptionx:before {
+            transform: skewX(-3deg);
+            content: "";
+            background: #fff;
+            width: 30px;
+            position: absolute;
+            left: -10px;
+            top: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        .blog-cardx.altx {
+            flex-direction: row-reverse;
+        }
+        .blog-cardx.altx .descriptionx:before {
+            left: inherit;
+            right: -10px;
+            transform: skew(3deg);
+        }
+        .blog-cardx.altx .detailsx {
+            padding-left: 25px;
+        }
+    }
+    /*ESTILOS MODAL CSS*/
+    
+    a[data-toggle="modal"] {
+        margin: 5px;
+    }
+    
+    .title {
+        color: #757575;
+        font-weight: bold;
+    }
+    
+    .modal {
+        text-align: left;
+    }
+    
+    .modal-content {
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+    }
+    
+    .modal-header {
+        border-bottom: 0;
+        padding-top: 15px;
+        padding-right: 26px;
+        padding-left: 26px;
+        padding-bottom: 0px;
+    }
+    
+    .modal-title {
+        font-size: 34px;
+    }
+    
+    .modal-body {
+        border-bottom: 0;
+        padding-top: 5px;
+        padding-right: 26px;
+        padding-left: 26px;
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+    
+    .modal-footer {
+        border-top: 0;
+        padding-top: 0px;
+        padding-right: 26px;
+        padding-bottom: 26px;
+        padding-left: 26px;
+    }
+    
+    .close {
+        margin: 40px auto;
+        -webkit-transition: -webkit-transform 1s ease-in-out;
+        transition: transform 1s ease-in-out;
+        transform-origin: center;
+        transform-style: preserve-3D;
+    }
+    
+    .close:hover {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        color: #000000;
+    }
+    
+    .form-holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+    }
+    
+    .form-holder .form-content {
+        position: relative;
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 60px;
+    }
+    
+    .form-content .form-items {
+        border: 3px solid #fff;
+        padding: 40px;
+        display: inline-block;
+        width: 100%;
+        min-width: 540px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        text-align: left;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    }
+    
+    .form-content h3 {
+        color: #fff;
+        text-align: left;
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .form-content h3.form-title {
+        margin-bottom: 30px;
+    }
+    
+    .form-content p {
+        color: #fff;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .form-content label,
+    .was-validated .form-check-input:invalid~.form-check-label,
+    .was-validated .form-check-input:valid~.form-check-label {
+        color: #fff;
+    }
+    
+    .form-content input[type=text],
+    .form-content input[type=password],
+    .form-content input[type=email],
+    .form-content select {
+        width: 100%;
+        padding: 9px 20px;
+        text-align: left;
+        border: none;
+        outline: none;
+        border-radius: 6px;
+        background-color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+        color: #b6c0bc;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        margin-top: 16px;
+    }
+    
+    select {
+        outline: none;
+    }
+    
+    .form-content textarea {
+        position: static !important;
+        width: 100%;
+        padding: 8px 20px;
+        border-radius: 6px;
+        text-align: left;
+        background-color: #fff;
+        border: 0;
+        font-size: 15px;
+        font-weight: 300;
+        color: #8D8D8D;
+        outline: none;
+        resize: none;
+        height: 120px;
+        -webkit-transition: none;
+        transition: none;
+        margin-bottom: 14px;
+    }
+    
+    .form-content textarea:hover,
+    .form-content textarea:focus {
+        border: 0;
+        background-color: #ebeff8;
+        color: #8D8D8D;
+    }
+    
+    .mv-up {
+        margin-top: -9px !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .valid-feedback {
+        color: #b6c0bc;
+    }
+    /*FIN ESTILOS MODAL CSS*/
+    /*FOOTER COPY*/
+    
+    p .led:hover {
+        font-size: 20px;
+    }
+    /*FIN FOOTER COPY*/
+    /*WAVES*/
+    
+    .wavesx {
+        position: relative;
+        width: 100%;
+        height: 15vh;
+        margin-bottom: -7px;
+        /*Fix for safari gap*/
+        min-height: 100px;
+        max-height: 150px;
+    }
+    /* Animation */
+    
+    .parallaxst>use {
+        animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+    
+    .parallaxst>use:nth-child(1) {
+        animation-delay: -2s;
+        animation-duration: 7s;
+    }
+    
+    .parallaxst>use:nth-child(2) {
+        animation-delay: -3s;
+        animation-duration: 10s;
+    }
+    
+    .parallaxst>use:nth-child(3) {
+        animation-delay: -4s;
+        animation-duration: 13s;
+    }
+    
+    .parallaxst>use:nth-child(4) {
+        animation-delay: -5s;
+        animation-duration: 20s;
+    }
+    
+    @keyframes move-forever {
+        0% {
+            transform: translate3d(-80px, 0, 0);
+        }
+        100% {
+            transform: translate3d(85px, 0, 0);
+        }
+    }
+    /*Shrinking for mobile*/
+    
+    @media (max-width: 768px) {
+        .wavesx {
+            height: 40px;
+            min-height: 40px;
+        }
+    }
+    /*END WAVES*/
+    /*marca objetos*/
+    
+    .marvca {
+        transition: transform .2s;
+        /* Animation */
+    }
+    
+    .marvca:hover {
+        transform: scale(1.5);
+        /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    }
+    /*fin marca objetos*/
